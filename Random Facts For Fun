@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Fun Facts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 50px;
+      margin: 0;
+    }
+
+    .box {
+      background: #1f2937;
+      padding: 25px;
+      border-radius: 20px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1>🎉 Random Fun Facts</h1>
+
+    <p id="fact">
+      Bananas are berries, but strawberries are not.
+    </p>
+
+    <button onclick="newFact()">
+      Show Another Fact
+    </button>
+  </div>
+
+  <script>
+    const facts = [
+      "Octopuses have 3 hearts.",
+      "Honey never expires.",
+      "Cats sleep about 70% of their lives.",
+      "Sharks existed before trees.",
+      "A group of flamingos is called a flamboyance.",
+      "Wombat poop is cube-shaped.",
+      "Koalas sleep up to 22 hours a day."
+    ];
+
+    function newFact() {
+      const random = Math.floor(Math.random() * facts.length);
+      document.getElementById("fact").innerText = facts[random];
+    }
+  </script>
+
+</body>
+</html>
